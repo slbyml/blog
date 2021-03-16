@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>静水深流</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="shortcut icon" href="/link.jpg" type="image/jpg">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/link.jpg">
+    <link rel="mask-icon" href="/link.jpg" color="#1e90ff">
+    <script src="https://hm.baidu.com/hm.js?5ebfc1c23339503a9d4d7fae0f2b1f17" defer="true"></script>
+    <meta name="description" content="个人博客_web前端技术文章_静态博客_技术总结">
+    <meta name="keywords" content="web前端,前端面试题,HTML5,CSS3,CSS,jQuery,JS,JavaScript,前端,vue,博客,技术文章,静水深流,react,18禁">
+    <meta name="author" content="shaolibao">
+    <meta name="google-site-verification" content="018PP6ptGKwOerKbKgiOwbvtEvXE4z1MbWL70S53pUg">
+    <meta name="baidu-site-verification" content="OLgrXzieBl">
+    <meta name="msvalidate.01" content="18F16D4763157255069DFE0F9ADEF271">
+    <meta name="theme-color" content="#1e90ff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/link.jpg">
+    <meta name="msapplication-TileColor" content="#000000">
+    <link rel="preload" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/css/0.styles.f64743fe.css" as="style"><link rel="preload" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/app.13bced86.js" as="script"><link rel="preload" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/2.9b117bd7.js" as="script"><link rel="preload" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/13.cd1f1fcc.js" as="script"><link rel="preload" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/5.1a34cdcc.js" as="script"><link rel="preload" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/3.11d284de.js" as="script"><link rel="preload" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/8.511f15c8.js" as="script"><link rel="preload" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/4.30cfb7ec.js" as="script"><link rel="preload" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/7.cec8ed10.js" as="script"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/10.226630f0.js"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/11.c8003f63.js"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/12.ac4cf352.js"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/14.2085905c.js"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/15.53e18c18.js"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/16.92fbcd34.js"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/17.93127adb.js"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/18.95cac0c1.js"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/19.458339ce.js"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/20.147793b4.js"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/21.40e3febe.js"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/22.b1991fb6.js"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/23.4d9f4cde.js"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/24.042a22e8.js"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/25.c914c590.js"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/26.e9a40fd6.js"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/27.63979a57.js"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/28.7a647854.js"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/29.2dce19c2.js"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/30.8c63f7c8.js"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/31.52f4cfbe.js"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/32.175eeca2.js"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/33.e5f06942.js"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/34.160d1cdd.js"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/35.69d5ace4.js"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/36.a6c566a8.js"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/37.7f4b1afa.js"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/38.826c77ca.js"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/39.3a775476.js"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/40.4987df68.js"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/41.365ef3ed.js"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/42.7abe9f2f.js"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/43.2ac49e84.js"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/6.1fb92812.js"><link rel="prefetch" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/9.fdd3d3f5.js">
+    <link rel="stylesheet" href="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/css/0.styles.f64743fe.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar page-list"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">静水深流</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/list/" class="nav-link router-link-exact-active router-link-active">
+  文章
+</a></div><div class="nav-item"><a href="/space/index.html" class="nav-link">
+  空间
+</a></div><div class="nav-item"><a href="/links/index.html" class="nav-link">
+  分享
+</a></div><div class="nav-item"><a href="https://slbyml.github.io/jsLibrary/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  demo
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/slbyml" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/list/" class="nav-link router-link-exact-active router-link-active">
+  文章
+</a></div><div class="nav-item"><a href="/space/index.html" class="nav-link">
+  空间
+</a></div><div class="nav-item"><a href="/links/index.html" class="nav-link">
+  分享
+</a></div><div class="nav-item"><a href="https://slbyml.github.io/jsLibrary/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  demo
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/slbyml" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span></span> <!----></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default" data-v-0f562cfd data-v-0f562cfd><div class="right" data-v-0f562cfd><div class="info" data-v-0f562cfd><!----> <div class="tags" data-v-75900f6e data-v-0f562cfd><h6 data-v-75900f6e>标签云</h6> <span data-v-75900f6e>css</span><span data-v-75900f6e>面试</span><span data-v-75900f6e>架构</span><span data-v-75900f6e>http</span><span data-v-75900f6e>服务器</span><span data-v-75900f6e>javascript</span><span data-v-75900f6e>vue</span><span data-v-75900f6e>webpack</span><span data-v-75900f6e>算法</span><span data-v-75900f6e>前端</span><span data-v-75900f6e>axios</span><span data-v-75900f6e>DOM</span><span data-v-75900f6e>vuepress</span><span data-v-75900f6e>web</span><span data-v-75900f6e>摘录</span> <span data-v-75900f6e>所有</span></div></div> <!----></div> <div class="lists list-box" data-v-3cf4d484 data-v-0f562cfd><div class="item" data-v-3cf4d484><a href="/QA/webpack.html" title="webpack开发、使用及优化总结" class="link" data-v-3cf4d484>
+     webpack开发、使用及优化总结
+    </a> <div class="info" data-v-3cf4d484><p title="文章最后修改时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>2021-3-16</p> <p title="文章标签" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i> <span class="tag" data-v-3cf4d484>
+            webpack
+          </span><span class="tag" data-v-3cf4d484>
+            面试
+          </span></p> <p title="文章大概的字数" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>2.3k</p> <p title="大概需要阅读的时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>9m</p></div> <div class="art" data-v-3cf4d484>
+      本文总结webpack的一些使用，原理及优化；webpack已成为前端打包的主流工具，它的作用是对项目中的静态资源进行统一管理，为项目的发布提供最优的打包和部署方案，可以把应用中的js、css、图片等资源集中打成一个或多个包文件。……<a href="/QA/webpack.html" class="look" data-v-3cf4d484>阅读原文</a></div></div><div class="item" data-v-3cf4d484><a href="/javascript/js.html" title="javascript原生代码实现及代码总结" class="link" data-v-3cf4d484>
+     javascript原生代码实现及代码总结
+    </a> <div class="info" data-v-3cf4d484><p title="文章最后修改时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>2021-3-16</p> <p title="文章标签" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i> <span class="tag" data-v-3cf4d484>
+            javascript
+          </span><span class="tag" data-v-3cf4d484>
+            面试
+          </span></p> <p title="文章大概的字数" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>2.4k</p> <p title="大概需要阅读的时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>10m</p></div> <div class="art" data-v-3cf4d484>
+      本文总结自己遇到的、文章中看到的、面试中的一些javascript问题，及实现方式其中也会包括一些源码实现，及polyfill，包括但不限于JsonP、柯里化函数 currying、计算交集、乱序、动态创建脚本、new的模拟、lazyMan、EventEmitter等，本文主要讲代码，所以代码量比较多……<a href="/javascript/js.html" class="look" data-v-3cf4d484>阅读原文</a></div></div><div class="item" data-v-3cf4d484><a href="/QA/http.html" title="关于http服务端的学习&amp;总结" class="link" data-v-3cf4d484>
+     关于http服务端的学习&amp;总结
+    </a> <div class="info" data-v-3cf4d484><p title="文章最后修改时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>2021-3-11</p> <p title="文章标签" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i> <span class="tag" data-v-3cf4d484>
+            http
+          </span><span class="tag" data-v-3cf4d484>
+            服务器
+          </span><span class="tag" data-v-3cf4d484>
+            面试
+          </span></p> <p title="文章大概的字数" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>4.1k</p> <p title="大概需要阅读的时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>16m</p></div> <div class="art" data-v-3cf4d484>
+      本文包括自己遇到的、文章中看到的、面试中的一些http、服务器问题，包括但不限于浏览器缓存,http状态吗,https等,是一篇总结、学习类文章……<a href="/QA/http.html" class="look" data-v-3cf4d484>阅读原文</a></div></div><div class="item" data-v-3cf4d484><a href="/algorithm/hard.html" title="LeetCode算法学习总结-困难" class="link" data-v-3cf4d484>
+     LeetCode算法学习总结-困难
+    </a> <div class="info" data-v-3cf4d484><p title="文章最后修改时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>2021-3-11</p> <p title="文章标签" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i> <span class="tag" data-v-3cf4d484>
+            javascript
+          </span><span class="tag" data-v-3cf4d484>
+            面试
+          </span><span class="tag" data-v-3cf4d484>
+            算法
+          </span></p> <p title="文章大概的字数" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>453</p> <p title="大概需要阅读的时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>2m</p></div> <div class="art" data-v-3cf4d484>
+      数据结构与算法是每个前端必须经历的阶段，学好算法并非一日之功，需要不断的学习，积累和刷题；学好算法对于面试和平时工作中都有很大的助力；本文是在学习leetcode中对于算法的总结与积累……<a href="/algorithm/hard.html" class="look" data-v-3cf4d484>阅读原文</a></div></div><div class="item" data-v-3cf4d484><a href="/saves/oauth.html" title="扫码登录的实现原理" class="link" data-v-3cf4d484>
+     扫码登录的实现原理
+    </a> <div class="info" data-v-3cf4d484><p title="文章最后修改时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>2021-2-2</p> <p title="文章标签" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i> <span class="tag" data-v-3cf4d484>
+            http
+          </span><span class="tag" data-v-3cf4d484>
+            服务器
+          </span></p> <p title="文章大概的字数" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>799</p> <p title="大概需要阅读的时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>3m</p></div> <div class="art" data-v-3cf4d484>
+      OAuth 2.0 是一种授权机制，主要用来颁发令牌（token）.而网站的扫码登录基本都是给予OAuth原理实现的,如微信扫码登录等……<a href="/saves/oauth.html" class="look" data-v-3cf4d484>阅读原文</a></div></div><div class="item" data-v-3cf4d484><a href="/QA/free.html" title="前端发展及选择" class="link" data-v-3cf4d484>
+     前端发展及选择
+    </a> <div class="info" data-v-3cf4d484><p title="文章最后修改时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>2021-1-19</p> <p title="文章标签" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i> <span class="tag" data-v-3cf4d484>
+            架构
+          </span><span class="tag" data-v-3cf4d484>
+            面试
+          </span></p> <p title="文章大概的字数" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>1.7k</p> <p title="大概需要阅读的时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>7m</p></div> <div class="art" data-v-3cf4d484>
+      本文总结自己遇到的、文章中看到的、面试中的一些问题，是对前端现状，框架选型、框架对比、前世今生、个人发展、职业规划等的总结，使一些开放性问题的总结……<a href="/QA/free.html" class="look" data-v-3cf4d484>阅读原文</a></div></div><div class="item" data-v-3cf4d484><a href="/algorithm/easy.html" title="LeetCode算法学习总结-简单" class="link" data-v-3cf4d484>
+     LeetCode算法学习总结-简单
+    </a> <div class="info" data-v-3cf4d484><p title="文章最后修改时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>2021-1-19</p> <p title="文章标签" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i> <span class="tag" data-v-3cf4d484>
+            javascript
+          </span><span class="tag" data-v-3cf4d484>
+            面试
+          </span><span class="tag" data-v-3cf4d484>
+            算法
+          </span></p> <p title="文章大概的字数" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>964</p> <p title="大概需要阅读的时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>4m</p></div> <div class="art" data-v-3cf4d484>
+      数据结构与算法是每个前端必须经历的阶段，学好算法并非一日之功，需要不断的学习，积累和刷题；学好算法对于面试和平时工作中都有很大的助力；本文是在学习leetcode中对于算法的总结与积累……<a href="/algorithm/easy.html" class="look" data-v-3cf4d484>阅读原文</a></div></div><div class="item" data-v-3cf4d484><a href="/algorithm/sort.html" title="排序算法总结" class="link" data-v-3cf4d484>
+     排序算法总结
+    </a> <div class="info" data-v-3cf4d484><p title="文章最后修改时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>2020-12-14</p> <p title="文章标签" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i> <span class="tag" data-v-3cf4d484>
+            javascript
+          </span><span class="tag" data-v-3cf4d484>
+            面试
+          </span><span class="tag" data-v-3cf4d484>
+            算法
+          </span></p> <p title="文章大概的字数" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>1k</p> <p title="大概需要阅读的时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>4m</p></div> <div class="art" data-v-3cf4d484>
+      数据结构与算法对于一个程序员的发展有着至关重要的作用，学好算法对于我们的工作帮助会很大，这里有大量经过javascript实现的算法代码，本文意在总结一些常见的算法，帮助同学们查看，及在项目中应用，文章来源于总结、面试、掘金、leetCode等网站；……<a href="/algorithm/sort.html" class="look" data-v-3cf4d484>阅读原文</a></div></div><div class="item" data-v-3cf4d484><a href="/javascript/genre.html" title="javascript数据类型及装箱拆箱介绍" class="link" data-v-3cf4d484>
+     javascript数据类型及装箱拆箱介绍
+    </a> <div class="info" data-v-3cf4d484><p title="文章最后修改时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>2020-10-20</p> <p title="文章标签" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i> <span class="tag" data-v-3cf4d484>
+            javascript
+          </span></p> <p title="文章大概的字数" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>816</p> <p title="大概需要阅读的时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>3m</p></div> <div class="art" data-v-3cf4d484>
+      拥有扎实的基础是一个工程师进击必不可少的后盾；而在前端世界里，数据类型是一个初学者首先学习的基础，本文将对javascript的基础及装箱拆箱做一些说明；作为总结也作为笔记方便别人和自己学习及复习……<a href="/javascript/genre.html" class="look" data-v-3cf4d484>阅读原文</a></div></div><div class="item" data-v-3cf4d484><a href="/QA/js-theory.html" title="前端面试题总结" class="link" data-v-3cf4d484>
+     前端面试题总结
+    </a> <div class="info" data-v-3cf4d484><p title="文章最后修改时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>2020-10-13</p> <p title="文章标签" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i> <span class="tag" data-v-3cf4d484>
+            javascript
+          </span><span class="tag" data-v-3cf4d484>
+            面试
+          </span></p> <p title="文章大概的字数" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>2.3k</p> <p title="大概需要阅读的时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>9m</p></div> <div class="art" data-v-3cf4d484>
+      本文总结自己遇到的、文章中看到的、面试中的一些javascript问题，包括但不限于es6、函数的区别、AMD&amp;CMD、async&amp;defer区别、输入URL后干了什么等，本文主要是讲解理论只是，代码量少……<a href="/QA/js-theory.html" class="look" data-v-3cf4d484>阅读原文</a></div></div><div class="item" data-v-3cf4d484><a href="/QA/vue.html" title="vue原理、使用及面试方面的总结" class="link" data-v-3cf4d484>
+     vue原理、使用及面试方面的总结
+    </a> <div class="info" data-v-3cf4d484><p title="文章最后修改时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>2020-6-17</p> <p title="文章标签" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i> <span class="tag" data-v-3cf4d484>
+            vue
+          </span><span class="tag" data-v-3cf4d484>
+            面试
+          </span></p> <p title="文章大概的字数" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>3.3k</p> <p title="大概需要阅读的时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>13m</p></div> <div class="art" data-v-3cf4d484>
+      本文包括但不限于vue响应式原理、vue生命周期、vue-router、vuex、dom-diff实现等，vue是一套用于构建用户界面的渐进式JavaScript框架。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，方便与第三方库或既有项目整合……<a href="/QA/vue.html" class="look" data-v-3cf4d484>阅读原文</a></div></div><div class="item" data-v-3cf4d484><a href="/algorithm/study.html" title="常见算法学习" class="link" data-v-3cf4d484>
+     常见算法学习
+    </a> <div class="info" data-v-3cf4d484><p title="文章最后修改时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>2020-6-17</p> <p title="文章标签" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i> <span class="tag" data-v-3cf4d484>
+            javascript
+          </span><span class="tag" data-v-3cf4d484>
+            面试
+          </span><span class="tag" data-v-3cf4d484>
+            算法
+          </span></p> <p title="文章大概的字数" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>369</p> <p title="大概需要阅读的时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>1m</p></div> <div class="art" data-v-3cf4d484>
+      本文包括自己遇到的、文章中看到的、面试中的一些算法问题，包括但不限于各种排序、leetCode、乱序等,是一篇总结、学习类文章……<a href="/algorithm/study.html" class="look" data-v-3cf4d484>阅读原文</a></div></div><div class="item" data-v-3cf4d484><a href="/QA/css.html" title="css面试总结" class="link" data-v-3cf4d484>
+     css面试总结
+    </a> <div class="info" data-v-3cf4d484><p title="文章最后修改时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>2020-6-8</p> <p title="文章标签" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i> <span class="tag" data-v-3cf4d484>
+            css
+          </span><span class="tag" data-v-3cf4d484>
+            面试
+          </span></p> <p title="文章大概的字数" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>404</p> <p title="大概需要阅读的时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>1m</p></div> <div class="art" data-v-3cf4d484>
+      本文包括自己遇到的、文章中看到的、面试中的一些css问题，包括但不限于BFC、居中等,是一篇总结、学习类文章……<a href="/QA/css.html" class="look" data-v-3cf4d484>阅读原文</a></div></div><div class="item" data-v-3cf4d484><a href="/saves/blog.html" title="博客诞生记" class="link" data-v-3cf4d484>
+     博客诞生记
+    </a> <div class="info" data-v-3cf4d484><p title="文章最后修改时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>2020-3-24</p> <p title="文章标签" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i> <span class="tag" data-v-3cf4d484>
+            vuepress
+          </span><span class="tag" data-v-3cf4d484>
+            前端
+          </span></p> <p title="文章大概的字数" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>3.7k</p> <p title="大概需要阅读的时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>15m</p></div> <div class="art" data-v-3cf4d484>
+      本文介绍应用VuePress搭建一个博客，据官网说：VuePress 由两部分组成：一部分是支持用 Vue 开发主题的极简静态网站生成器，另一个部分是为书写技术文档而优化的默认主题。它的诞生初衷是为了支持 Vue 及其子项目的文档需求。……<a href="/saves/blog.html" class="look" data-v-3cf4d484>阅读原文</a></div></div><div class="item" data-v-3cf4d484><a href="/javascript/axios.html" title="ajax取消接口请求" class="link" data-v-3cf4d484>
+     ajax取消接口请求
+    </a> <div class="info" data-v-3cf4d484><p title="文章最后修改时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>2020-3-16</p> <p title="文章标签" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i> <span class="tag" data-v-3cf4d484>
+            vue
+          </span><span class="tag" data-v-3cf4d484>
+            axios
+          </span></p> <p title="文章大概的字数" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>898</p> <p title="大概需要阅读的时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>3m</p></div> <div class="art" data-v-3cf4d484>
+      总结ajax取消接口请求的方法，以及在axios中对同一时间多个相同接口请求的拦截并取消及切换标签后取消上个页面请求的（防止页面数据和当前页面条件不相符）方法……<a href="/javascript/axios.html" class="look" data-v-3cf4d484>阅读原文</a></div></div><div class="item" data-v-3cf4d484><a href="/javascript/domCode.html" title="DOM相关事件记录" class="link" data-v-3cf4d484>
+     DOM相关事件记录
+    </a> <div class="info" data-v-3cf4d484><p title="文章最后修改时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>2020-2-12</p> <p title="文章标签" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i> <span class="tag" data-v-3cf4d484>
+            javascript
+          </span><span class="tag" data-v-3cf4d484>
+            面试
+          </span><span class="tag" data-v-3cf4d484>
+            DOM
+          </span></p> <p title="文章大概的字数" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>278</p> <p title="大概需要阅读的时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>1m</p></div> <div class="art" data-v-3cf4d484>
+      详记DOM相关的javascript事件，包括一些常见相似事件的分析如：target&amp;currentTarget、tagName&amp;nodeName等；通过这篇文章来学习和记录……<a href="/javascript/domCode.html" class="look" data-v-3cf4d484>阅读原文</a></div></div><div class="item" data-v-3cf4d484><a href="/javascript/extend.html" title="JavaScript各种继承方式和优缺点" class="link" data-v-3cf4d484>
+     JavaScript各种继承方式和优缺点
+    </a> <div class="info" data-v-3cf4d484><p title="文章最后修改时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>2019-9-3</p> <p title="文章标签" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i> <span class="tag" data-v-3cf4d484>
+            javascript
+          </span><span class="tag" data-v-3cf4d484>
+            面试
+          </span></p> <p title="文章大概的字数" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>875</p> <p title="大概需要阅读的时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>3m</p></div> <div class="art" data-v-3cf4d484>
+      javascript继承无论是在工作中还是在面试中，都会经常遇到，目前常见的继承有六七种，不同的继承方式也有各自不同的优缺点；红宝书中对继承有详细的介绍和讲解，本文意在总结、记录；……<a href="/javascript/extend.html" class="look" data-v-3cf4d484>阅读原文</a></div></div><div class="item" data-v-3cf4d484><a href="/QA/virtaul.html" title="Virtual DOM 真的比操作原生 DOM 快吗？" class="link" data-v-3cf4d484>
+     Virtual DOM 真的比操作原生 DOM 快吗？
+    </a> <div class="info" data-v-3cf4d484><p title="文章最后修改时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>2019-6-6</p> <p title="文章标签" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i> <span class="tag" data-v-3cf4d484>
+            javascript
+          </span><span class="tag" data-v-3cf4d484>
+            面试
+          </span></p> <p title="文章大概的字数" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>2k</p> <p title="大概需要阅读的时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>8m</p></div> <div class="art" data-v-3cf4d484>
+      React和Vue，都不约而同的借助Virtual DOM技术提高页面的渲染效率,而VirtualDOM的主要思想就是模拟DOM的树状结构,避免了冗余琐碎的DOM树操作负担，进而有效提高了性能。……<a href="/QA/virtaul.html" class="look" data-v-3cf4d484>阅读原文</a></div></div><div class="item" data-v-3cf4d484><a href="/javascript/flatten.html" title="JavaScript 数组展开(扁平化)和underscore的 flatten" class="link" data-v-3cf4d484>
+     JavaScript 数组展开(扁平化)和underscore的 flatten
+    </a> <div class="info" data-v-3cf4d484><p title="文章最后修改时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>2019-6-4</p> <p title="文章标签" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i> <span class="tag" data-v-3cf4d484>
+            javascript
+          </span><span class="tag" data-v-3cf4d484>
+            面试
+          </span></p> <p title="文章大概的字数" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>869</p> <p title="大概需要阅读的时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>3m</p></div> <div class="art" data-v-3cf4d484>
+      数组展开就是将嵌套数组扁平化（专为为一维的），这在面试中经常遇到，平时工作中也有可能会遇到，本文将几种常见的方式展现出来……<a href="/javascript/flatten.html" class="look" data-v-3cf4d484>阅读原文</a></div></div><div class="item" data-v-3cf4d484><a href="/css/shape.html" title="CSS 形状的实现" class="link" data-v-3cf4d484>
+     CSS 形状的实现
+    </a> <div class="info" data-v-3cf4d484><p title="文章最后修改时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>2019-6-2</p> <p title="文章标签" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i> <span class="tag" data-v-3cf4d484>
+            css
+          </span><span class="tag" data-v-3cf4d484>
+            前端
+          </span></p> <p title="文章大概的字数" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>568</p> <p title="大概需要阅读的时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>2m</p></div> <div class="art" data-v-3cf4d484>
+      本文意在总结项目中用到和可能会用到的形状图形，并通过css来实现，减少页面上图片的请求数量，并可以不失真的更改形状大小和颜色……<a href="/css/shape.html" class="look" data-v-3cf4d484>阅读原文</a></div></div><div class="item" data-v-3cf4d484><a href="/saves/zoom.html" title="javascript检测浏览器的缩放状态实现代码" class="link" data-v-3cf4d484>
+     javascript检测浏览器的缩放状态实现代码
+    </a> <div class="info" data-v-3cf4d484><p title="文章最后修改时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>2019-5-25</p> <p title="文章标签" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i> <span class="tag" data-v-3cf4d484>
+            javascript
+          </span><span class="tag" data-v-3cf4d484>
+            web
+          </span><span class="tag" data-v-3cf4d484>
+            摘录
+          </span></p> <p title="文章大概的字数" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>537</p> <p title="大概需要阅读的时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>2m</p></div> <div class="art" data-v-3cf4d484>
+      浏览器的内容可以通过Ctrl和+或—一起使用，来实现页面的缩放，但是有时候这种缩放会导致页面布局的错乱，变形，所以我们需要检测用户的浏览器的缩放状态，以提醒用户恢复页面缩放大小，以实现最好的用户体验……<a href="/saves/zoom.html" class="look" data-v-3cf4d484>阅读原文</a></div></div><div class="item" data-v-3cf4d484><a href="/javascript/type.html" title="Javascript之常见类型判断汇总" class="link" data-v-3cf4d484>
+     Javascript之常见类型判断汇总
+    </a> <div class="info" data-v-3cf4d484><p title="文章最后修改时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>2019-5-21</p> <p title="文章标签" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i> <span class="tag" data-v-3cf4d484>
+            javascript
+          </span></p> <p title="文章大概的字数" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>990</p> <p title="大概需要阅读的时间" data-v-3cf4d484><i class="iconfont" data-v-3cf4d484></i>4m</p></div> <div class="art" data-v-3cf4d484>
+      类型判断在前端开发中应用非常之广泛，有常见的六个基本类型的判断，有对数组、对象、日期等的判断，更有对DOM元素、arguments对象的判断，本文将借鉴jQuery和网上的例子实现对各种类型的判断……<a href="/javascript/type.html" class="look" data-v-3cf4d484>阅读原文</a></div></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">3/16/2021, 6:18:00 PM</span></div></footer> <!----> </main></div><div class="global-ui"><div class="ff">
+  部分内容来源于网络，如有侵权，请留言或联系994917123@qq.com;访问量:<span id="busuanzi_value_site_pv">waiting</span>;访客数:<span id="busuanzi_value_site_uv">waiting</span></div></div></div>
+    <script src="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/app.13bced86.js" defer></script><script src="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/2.9b117bd7.js" defer></script><script src="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/13.cd1f1fcc.js" defer></script><script src="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/5.1a34cdcc.js" defer></script><script src="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/3.11d284de.js" defer></script><script src="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/8.511f15c8.js" defer></script><script src="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/4.30cfb7ec.js" defer></script><script src="//slbblog.oss-cn-beijing.aliyuncs.com/dist/assets/js/7.cec8ed10.js" defer></script>
+  </body>
+</html>
